@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown 笔记</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Markdown 笔记编辑器</h1>
+        <div class="description">
+            <p>在编辑区输入 Markdown 文本，预览区实时显示效果</p>
+        </div>
+
+        <div class="editor-container">
+            <div class="editor-panel">
+                <div class="panel-header">编辑区</div>
+                <textarea id="input" placeholder="在这里输入 Markdown 文本...
+# 标题
+## 子标题
+- 列表项
+**粗体** *斜体*"></textarea>
+            </div>
+            <div class="preview-panel">
+                <div class="panel-header">预览区</div>
+                <div id="preview"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <input type="text" id="noteTitle" placeholder="笔记标题">
+            <button id="saveBtn">保存笔记</button>
+            <button id="exportTxtBtn">导出TXT</button>
+            <button id="exportHtmlBtn">导出HTML</button>
+            <button id="clearBtn">清除</button>
+        </div>
+
+        <div class="saved-notes">
+            <h2>已保存的笔记</h2>
+            <ul id="notesList"></ul>
+        </div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+
+</html>

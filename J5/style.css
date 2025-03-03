@@ -1,0 +1,190 @@
+/* 基础样式 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* 添加任务区域 */
+.add-task {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#taskPriority {
+    width: 120px;
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+}
+
+#addButton {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#addButton:hover {
+    background-color: #2980b9;
+}
+
+/* 过滤器样式 */
+.task-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.filter-btn {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.filter-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.filter-btn.active {
+    font-weight: bold;
+    border-bottom: 2px solid #3498db;
+}
+
+/* 任务列表 */
+#taskList {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+#taskList li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+#taskList li:hover {
+    background-color: #f9f9f9;
+}
+
+#taskList li.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-text {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.priority-tag {
+    padding: 2px 6px;
+    font-size: 12px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.priority-高 .priority-tag {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.priority-中 .priority-tag {
+    background-color: #f39c12;
+    color: white;
+}
+
+.priority-低 .priority-tag {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.delete-btn {
+    padding: 5px 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* 任务统计 */
+.task-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #777;
+}
+
+#clearCompleted {
+    background-color: transparent;
+    border: none;
+    color: #777;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+#clearCompleted:hover {
+    color: #e74c3c;
+}
+
+/* 编辑任务输入框 */
+.edit-input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #3498db;
+    border-radius: 3px;
+    font-size: 16px;
+    margin: 0 10px;
+} 

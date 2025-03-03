@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易任务管理</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入jQuery库 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>我的任务列表</h1>
+
+        <div class="add-task">
+            <input type="text" id="taskInput" placeholder="输入新任务...">
+            <select id="taskPriority">
+                <option value="低">低优先级</option>
+                <option value="中" selected>中优先级</option>
+                <option value="高">高优先级</option>
+            </select>
+            <button id="addButton">添加任务</button>
+        </div>
+
+        <div class="task-filters">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="active">未完成</button>
+            <button class="filter-btn" data-filter="completed">已完成</button>
+        </div>
+
+        <ul id="taskList">
+            <li class="task-item priority-中">
+                <input type="checkbox" class="task-checkbox">
+                <span class="task-text">示例任务（双击可编辑）</span>
+                <span class="priority-tag">中优先级</span>
+                <button class="delete-btn">删除</button>
+            </li>
+            <li class="task-item completed priority-低">
+                <input type="checkbox" checked class="task-checkbox">
+                <span class="task-text">已完成的任务示例</span>
+                <span class="priority-tag">低优先级</span>
+                <button class="delete-btn">删除</button>
+            </li>
+        </ul>
+
+        <div class="task-stats">
+            <span id="taskCount">0 个任务</span>
+            <button id="clearCompleted">清除已完成</button>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>

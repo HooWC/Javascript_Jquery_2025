@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery轮播图</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入jQuery库 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>jQuery图片轮播</h1>
+
+        <div class="carousel">
+            <!-- 轮播主容器 -->
+            <div class="carousel-container">
+                <div class="carousel-slide active">
+                    <img src="https://via.placeholder.com/800x400/3498db/ffffff?text=幻灯片1" alt="幻灯片1">
+                    <div class="caption">美丽风景</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://via.placeholder.com/800x400/e74c3c/ffffff?text=幻灯片2" alt="幻灯片2">
+                    <div class="caption">城市风光</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://via.placeholder.com/800x400/2ecc71/ffffff?text=幻灯片3" alt="幻灯片3">
+                    <div class="caption">自然景观</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://via.placeholder.com/800x400/f39c12/ffffff?text=幻灯片4" alt="幻灯片4">
+                    <div class="caption">历史建筑</div>
+                </div>
+            </div>
+
+            <!-- 左右箭头导航 -->
+            <button class="carousel-arrow prev">&lt;</button>
+            <button class="carousel-arrow next">&gt;</button>
+
+            <!-- 指示器导航 -->
+            <div class="carousel-indicators">
+                <button class="indicator active" data-slide="0"></button>
+                <button class="indicator" data-slide="1"></button>
+                <button class="indicator" data-slide="2"></button>
+                <button class="indicator" data-slide="3"></button>
+            </div>
+        </div>
+
+        <!-- 控制面板 -->
+        <div class="controls">
+            <button id="playPauseBtn">暂停</button>
+            <div class="speed-control">
+                <span>轮播速度: </span>
+                <button class="speed-btn" data-speed="2000">慢</button>
+                <button class="speed-btn active" data-speed="3000">中</button>
+                <button class="speed-btn" data-speed="5000">快</button>
+            </div>
+        </div>
+
+        <!-- 缩略图预览 -->
+        <div class="thumbnail-container">
+            <div class="thumbnail active" data-slide="0">
+                <img src="https://via.placeholder.com/150x80/3498db/ffffff?text=1" alt="缩略图1">
+            </div>
+            <div class="thumbnail" data-slide="1">
+                <img src="https://via.placeholder.com/150x80/e74c3c/ffffff?text=2" alt="缩略图2">
+            </div>
+            <div class="thumbnail" data-slide="2">
+                <img src="https://via.placeholder.com/150x80/2ecc71/ffffff?text=3" alt="缩略图3">
+            </div>
+            <div class="thumbnail" data-slide="3">
+                <img src="https://via.placeholder.com/150x80/f39c12/ffffff?text=4" alt="缩略图4">
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>
